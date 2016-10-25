@@ -31,5 +31,5 @@ JavaScript will always take precedence over ones provided using the html api.
 | `inStateClass` | `String` | `data-in-state-class` | The class(es) to add when enabling state. |
 
 ### Events and instance methods
-See the (documentation)[https://haaretz.github.io/htz-stateful-btn] for a review 
-of events and (instance API)[https://haaretz.github.io/htz-stateful-btn/module-htz-stateful-btn.html#API].
+See the [documentation](https://haaretz.github.io/htz-stateful-btn) for a review 
+of events and [instance API](https://haaretz.github.io/htz-stateful-btn/module-htz-stateful-btn.html#API).
