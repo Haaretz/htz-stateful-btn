@@ -1,0 +1,79 @@
+/*****************************************
+ *
+ * htz-stateful-btn
+ *
+ *****************************************/
+
+html {
+  direction: rtl;
+  background-color: #ccc;
+}
+
+.o-btn {
+  background-color: teal;
+  color: #fff;
+}
+
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+button {
+  border: .1666666667rem solid transparent;
+  padding: .8333333333rem 1.8333333333rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.25s cubic-bezier(0.55, 0, 0.1, 1);
+  outline: none;
+}
+
+.o-btn--busy {
+  -webkit-animation: loading 1s linear infinite;
+  animation: loading 1s linear infinite;
+  background-color: #ccc;
+  background-image: -webkit-linear-gradient(left top, rgba(0, 128, 128, 0.4) 10%, transparent 25%, transparent 50%, rgba(0, 128, 128, 0.4) 50%, rgba(0, 128, 128, 0.4) 80%, transparent 95%, transparent);
+  background-image: linear-gradient(to right bottom, rgba(0, 128, 128, 0.4) 10%, transparent 25%, transparent 50%, rgba(0, 128, 128, 0.4) 50%, rgba(0, 128, 128, 0.4) 80%, transparent 95%, transparent);
+  background-size: 100px 200px;
+  border-color: teal;
+  border-radius: 10em;
+  color: teal;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  will-change: border-radius;
+}
+.o-btn--busy:focus {
+  outline: none;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100px 0;
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100px 0;
+  }
+}
+
