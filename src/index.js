@@ -62,6 +62,9 @@ export default function statefulBtn(btn, inStateText, inStateClass) {
     a11yText = inStateText || btn.getAttribute('data-in-state-text');
     inStateClassName = inStateClass || btn.getAttribute('data-in-state-class');
 
+    // Help assitive tech announce changes
+    btn.setAttribute('aria-live', 'polite');
+
     isInit = true;
   }
 
@@ -72,6 +75,7 @@ export default function statefulBtn(btn, inStateText, inStateClass) {
    */
   function destroy() {
     if (isInit) {
+      btn.removeAttribute('aria-live');
       btn.removeAttribute('aria-label');
       btn.classList.remove(...inStateClassName.split(' '));
 
